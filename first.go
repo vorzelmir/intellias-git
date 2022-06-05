@@ -11,5 +11,5 @@ func second() {
 }
 
 func third(number int) {
-	fmt.Printf("This is %d commit")
+	fmt.Printf("This is %d commit", number)
 }
