@@ -16,7 +16,7 @@ func main() {
 	totalPrice := applePrice*totalApples + pearPrice*totalPears
 	fmt.Printf("Total price is: %.2f\n", totalPrice)
 
-	fmt.Println("How much pears or apples can we buy?")
+	fmt.Println("How many pears or apples can we buy?")
 	numbersApple := amountMoney / applePrice
 	numbersPears := amountMoney / pearPrice
 	fmt.Printf("We can buy %d pears or %d apples\n", numbersPears, int(numbersApple))
