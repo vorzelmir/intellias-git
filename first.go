@@ -9,3 +9,7 @@ func first() {
 func second() {
 	fmt.Println("Hello from first file again")
 }
+
+func third(number int) {
+	fmt.Printf("This is %d commit", number)
+}
