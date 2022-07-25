@@ -25,6 +25,11 @@ func main() {
 		}(key, val)
 	}
 	wg.Wait()
+
+	//task2
+	ch := make(chan int)
+	go totalSum(n, ch)
+	fmt.Println("sum", <-ch)
 }
 
 func sum(sl []int) {
@@ -33,4 +38,15 @@ func sum(sl []int) {
 		res += val
 	}
 	fmt.Printf("%d", res)
+}
+
+//task2
+func totalSum(sl [][]int, ch chan int) {
+	var temp int
+	for _, row := range sl {
+		for _, val := range row {
+			temp += val
+		}
+	}
+	ch <- temp
 }
